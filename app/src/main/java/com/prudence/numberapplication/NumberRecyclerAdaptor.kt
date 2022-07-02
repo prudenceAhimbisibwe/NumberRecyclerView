@@ -9,8 +9,10 @@ import androidx.recyclerview.widget.RecyclerView
 class NumberRecyclerAdaptor(var numberList:List<Int>):
     RecyclerView.Adapter<NumberViewHolder>(){
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NumberViewHolder {
-        var itemView=LayoutInflater.from(parent.context).inflate(R.layout.numbers_list_item,parent,false)
+        var itemView=LayoutInflater.from(parent.context).inflate(R.layout.numbers_list_item
+        ,parent,false)
         return NumberViewHolder(itemView)
+
     }
     override fun onBindViewHolder(holder: NumberViewHolder, position: Int) {
         holder.tvNumber.text=numberList.get(position).toString()
